@@ -6,7 +6,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class ServerFormComponent {
 
-  @Output() serverCreated = new EventEmitter<{name:string, content:string}>();
+  @Output('svCreated') serverCreated = new EventEmitter<{name:string, content:string}>();
   @Output() blueprintCreated = new EventEmitter<{name:string, content:string}>();
   newServerName = '';
   newServerContent = '';
