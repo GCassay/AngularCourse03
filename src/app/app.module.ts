@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
 import { ServerFormComponent } from './server-form/server-form.component';
 import { ServerElementComponent } from './server-element/server-element.component';
 
@@ -10,6 +11,7 @@ import { ServerElementComponent } from './server-element/server-element.componen
 @NgModule({
   declarations: [
     AppComponent,
+    HeaderComponent,
     ServerFormComponent,
     ServerElementComponent
   ],
