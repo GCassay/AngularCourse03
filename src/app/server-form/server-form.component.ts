@@ -8,23 +8,21 @@ export class ServerFormComponent {
 
   @Output('svCreated') serverCreated = new EventEmitter<{name:string, content:string}>();
   @Output() blueprintCreated = new EventEmitter<{name:string, content:string}>();
-  newServerName = '';
+
   newServerContent = '';
 
-  addServer(event) {
+  addServer(serverNameInput: HTMLInputElement) {
     this.serverCreated.emit({
-      name:this.newServerName,
+      name:serverNameInput.value, // Local Reference
       content:this.newServerContent
     });
-    console.log(this.newServerName);
   }
 
-  addBlueprint(event) {
+  addBlueprint(serverNameInput: HTMLInputElement) {
     this.blueprintCreated.emit({
-      name:this.newServerName,
+      name:serverNameInput.value,
       content:this.newServerContent
     });
-    console.log(this.newServerName);
   }
 
 }
