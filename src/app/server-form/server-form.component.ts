@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Output, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-server-form',
@@ -8,7 +8,7 @@ export class ServerFormComponent {
 
   @Output('svCreated') serverCreated = new EventEmitter<{name:string, content:string}>();
   @Output() blueprintCreated = new EventEmitter<{name:string, content:string}>();
-  @ViewChild('serverNameInput') Reference2NameInput; // Access Local Reference from TSC
+  @ViewChild('serverNameInput') Reference2NameInput: ElementRef; // Access Local Reference from TSC
 
   newServerContent = '';
 

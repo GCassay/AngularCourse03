@@ -1,7 +1,7 @@
 <div class="container">
 
   <app-header>
-    <b>NG-CONTENT HEADER</b> <!-- ng-content -->
+    <b #contentText>NG-CONTENT HEADER</b> <!-- ng-content + Local Reference -->
   </app-header>
 
   <app-server-form (svCreated)="onServerAdded($event)" (blueprintCreated)="onBlueprintAdded($event)"></app-server-form>
